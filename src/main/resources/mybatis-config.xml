@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <typeAliases>
+        <typeAlias alias="Auser" type="edu.xaut.po.Auser"/>
+        <typeAlias alias="Goods" type="edu.xaut.po.Goods"/>
+        <typeAlias alias="GoodsType" type="edu.xaut.po.GoodsType"/>
+        <typeAlias alias="Notice" type="edu.xaut.po.Notice"/>
+        <typeAlias alias="Buser" type="edu.xaut.po.Buser"/>
+        <typeAlias alias="Order" type="edu.xaut.po.Order"/>
+    </typeAliases>
+    <mappers>
+        <mapper resource="edu/xaut/mybatis/admin/AdminGoodsMapper.xml"/>
+        <mapper resource="edu/xaut/mybatis/admin/AdminMapper.xml"/>
+        <mapper resource="edu/xaut/mybatis/admin/AdminTypeMapper.xml"/>
+        <mapper resource="edu/xaut/mybatis/admin/AdminNoticeMapper.xml"/>
+        <mapper resource="edu/xaut/mybatis/admin/AdminUserMapper.xml"/>
+        <mapper resource="edu/xaut/mybatis/admin/AdminOrderMapper.xml"/>
+        <mapper resource="edu/xaut/mybatis/before/IndexMapper.xml"/>
+        <mapper resource="edu/xaut/mybatis/before/UserMapper.xml"/>
+        <mapper resource="edu/xaut/mybatis/before/CartMapper.xml"/>
+        <mapper resource="edu/xaut/mybatis/before/OrderMapper.xml"/>
+        <mapper resource="edu/xaut/mybatis/before/UserCenterMapper.xml"/>
+    </mappers>
+</configuration>

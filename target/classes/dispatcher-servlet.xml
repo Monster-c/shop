@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <!--    配置自动扫描-->
+    <context:component-scan base-package="edu.xaut.controller"/>
+    <context:component-scan base-package="edu.xaut.service"/>
+    <context:component-scan base-package="edu.xaut.dao"/>
+
+    <mvc:annotation-driven/>
+    <!-- annotation-driven用于简化开发的配置， 注解DefaultAnnotationHandlerMapping和AnnotationMethodHandlerAdapter -->
+    <!-- 使用resources过滤掉不需要dispatcher servlet的资源。 使用resources时，必须使用annotation-driven，不然resources元素会阻止任意控制器被调用。 -->
+    <!-- 配置静态资源，允许js目录下所有文件可见 -->
+    <!--    <mvc:default-servlet-handler/>-->
+
+    <!--    使得目录下文件可见 从WEB-INF开始扫描，故路径无需添加WEB-INF-->
+    <!--    <mvc:resources mapping="/static/**" location="/static/"/>-->
+
+    <mvc:resources location="/static/css/" mapping="/static/css/**"/>
+
+    <mvc:resources location="/static/images/" mapping="/static/images/**"/>
+
+    <!--    配置图片上传大小-->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="maxUploadSize" value="10485760"/>
+    </bean>
+
+
+    <!--    配置视图解析器-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" id="internalResourceViewResolver">
+        <!--        自动增加前后缀-->
+        <property name="prefix" value="/WEB-INF/jsp/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <!-- 配置springmvc将对象直接转换为json对象 -->
+    <mvc:annotation-driven>
+        <mvc:message-converters>
+            <bean class="org.springframework.http.converter.StringHttpMessageConverter"/>
+            <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"/>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
+
+    <!--    <mvc:interceptors>-->
+    <!--        &lt;!&ndash;        配置一个全局拦截器，拦截所有请求&ndash;&gt;-->
+    <!--        <bean class="edu.xaut.interceptor.TestInterceptor"/>-->
+
+    <!--        <mvc:interceptor>-->
+    <!--            &lt;!&ndash;            配置拦截器的作用路径&ndash;&gt;-->
+    <!--            <mvc:mapping path="/**"/>-->
+    <!--            &lt;!&ndash;            配置不需要拦截的路径&ndash;&gt;-->
+    <!--            &lt;!&ndash;            <mvc:exclude-mapping path=""/>&ndash;&gt;-->
+
+    <!--            <bean class="edu.xaut.interceptor.TestInterceptor"/>-->
+    <!--        </mvc:interceptor>-->
+    <!--    </mvc:interceptors>-->
+</beans>
