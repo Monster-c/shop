@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 public interface AdminGoodsService {
     String selectAGoods(Model model, Integer id, String act);
 
-    String deleteGoods(Integer ids[], Model model);
+    String deleteGoods(Integer[] ids, Model model);
 
     String deleteAGoods(Integer id, Model model);
 

@@ -175,6 +175,4 @@ public class AdminGoodsServiceImpl implements AdminGoodsService {
         model.addAttribute("msg", "成功删除商品！");
         return "forward:/adminGoods/selectGoods?act=deleteSelect";
     }
-
-
 }

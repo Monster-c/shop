@@ -1,6 +1,7 @@
 package edu.xaut.controller.admin;
 
 import edu.xaut.po.Goods;
+
 import edu.xaut.service.admin.AdminGoodsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

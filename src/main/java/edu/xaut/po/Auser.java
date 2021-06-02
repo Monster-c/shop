@@ -1,9 +1,12 @@
 package edu.xaut.po;
 
-/*
+/**
  * ausertable
- * */
+ */
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Auser {
     private String aname;
     private String apwd;
