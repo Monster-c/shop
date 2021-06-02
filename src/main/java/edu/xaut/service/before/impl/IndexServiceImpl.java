@@ -1,4 +1,4 @@
-package edu.xaut.service.before;
+package edu.xaut.service.before.impl;
 
 import edu.xaut.dao.AdminNoticeDao;
 import edu.xaut.dao.AdminTypeDao;
@@ -6,6 +6,7 @@ import edu.xaut.dao.IndexDao;
 import edu.xaut.po.Buser;
 import edu.xaut.po.Goods;
 import edu.xaut.po.Notice;
+import edu.xaut.service.before.IndexService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;

@@ -1,7 +1,9 @@
-package edu.xaut.service.admin;
+package edu.xaut.service.admin.impl;
 
 import edu.xaut.dao.AdminNoticeDao;
 import edu.xaut.po.Notice;
+import edu.xaut.service.admin.AdminNoticeService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
@@ -38,5 +40,4 @@ public class AdminNoticeServiceImpl implements AdminNoticeService {
         adminNoticeDao.deleteNotice(id);
         return "forward:/adminNotice/deleteNoticeSelect";
     }
-
 }

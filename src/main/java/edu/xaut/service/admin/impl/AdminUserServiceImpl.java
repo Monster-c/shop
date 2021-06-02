@@ -1,8 +1,9 @@
-package edu.xaut.service.admin;
+package edu.xaut.service.admin.impl;
 
 import edu.xaut.dao.AdminUserDao;
 import edu.xaut.dao.CartDao;
 import edu.xaut.dao.UserCenterDao;
+import edu.xaut.service.admin.AdminUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;

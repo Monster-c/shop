@@ -1,7 +1,8 @@
-package edu.xaut.service.admin;
+package edu.xaut.service.admin.impl;
 
 import edu.xaut.dao.AdminGoodsDao;
 import edu.xaut.po.Goods;
+import edu.xaut.service.admin.AdminGoodsService;
 import edu.xaut.util.MyUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;

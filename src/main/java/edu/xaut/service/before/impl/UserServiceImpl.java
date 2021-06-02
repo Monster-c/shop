@@ -1,7 +1,8 @@
-package edu.xaut.service.before;
+package edu.xaut.service.before.impl;
 
 import edu.xaut.dao.UserDao;
 import edu.xaut.po.Buser;
+import edu.xaut.service.before.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
